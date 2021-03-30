@@ -654,9 +654,35 @@ www.youtube.com/channel/UC3SyT4_WLHzN7JmHQwKQZww
 
 <br><br>
 
-* 하지만 마크다운 문법에서는 \*과 같은 경우 *Italic* 처리를 하기 때문에 허용되지 않는 RAW HTML과 구분하여 사용할 필요가 있음
-  
+* 하지만 마크다운 문법에서는 허용되지 않는 RAW HTML 태그가 존재
+* GFM는 태그 필터를 사용하고 HTML 출력을 렌더링할 때 다음 HTML 태그가 필터링되는데 여기서 [사용불가] 처리한 태그는 마크다운 문법에서 사용할 수 없음
+  * \<title>
+  * \<textarea>
+  * \<style>
+  * \<xmp> [사용불가]
+  * \<iframe>
+  * \<noembed> [사용불가]
+  * \<noframes> [사용불가]
+  * \<script>
+  * \<plaintext> [사용불가]
 
+여기서 사용불가 처리한 태그들은 다음과 같이 <>가 &lt;> 처리되어 표현됨
+
+```
+<strong> <title> <style> <em>
+
+<blockquote>
+  <xmp> is disallowed.  <XMP> is also disallowed.
+</blockquote>
+```
+
+```
+<p><strong> &lt;title> &lt;style> <em></p>
+<blockquote>
+  &lt;xmp> is disallowed.  &lt;XMP> is also disallowed.
+</blockquote>
+```
+-> 그렇기 때문에 이탤릭체로 표시되는 현상 발생
 
 ---
 
