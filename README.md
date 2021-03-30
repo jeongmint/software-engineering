@@ -60,7 +60,7 @@
 
 ============ <br/><br/>
 
-* 제목을 # 외에 '=' 혹은 '-' 를 사용하여 나타낼 수도 있음
+* 제목을 # 외에 '=' 혹은 '-' 를 사용하여 나타낼 수 있음
 
 ```markdown
 
@@ -346,9 +346,34 @@ __*Italic & Bold*__ 사용
 ---
 <br>
 
+### Task Lists
+
+* 리스트를 활용하여 작업 목록 체크리스트를 대괄호 []를 리스트의 숫자 대신 붙여 작성할 수 있음
+
+```
+- [x] @mentions, #refs, [links](), **formatting**, and <del>tags</del> supported
+- [x] list syntax required (any unordered or ordered list supported)
+- [x] this is a complete item
+- [ ] this is an incomplete item
+```
+  
+- [x] @mentions, #refs, [links](), **formatting**, and <del>tags</del> supported
+- [x] list syntax required (any unordered or ordered list supported)
+- [x] this is a complete item
+- [ ] this is an incomplete item
+
+
+---
+<br>
+
+
 ## 7. Code(코드 작성)
 
+* Syntax highlighting 이라고도 하며 IDE와 동일하게 구문 강조 라이브러리 사용이 가능
+
 type `nano` 즉, ``` 기호를 쓰고자 하는 언어 앞에 붙이고 다음과 같이 작성
+
+* C 언어
 
 ```
 ``` c
@@ -372,7 +397,30 @@ int main(){
 
 }
 ```
+
+* javascript
+
+```
+``` javascript
+    function fancyAlert(arg) {
+     if(arg) {
+    $.facebox({div:'#foo'})
+  }
+}
+```
+==== **결과** ====
+  
+  ```javascript
+    function fancyAlert(arg) {
+     if(arg) {
+    $.facebox({div:'#foo'})
+  }
+}
+```
+
 ---
+
+
 
 <br>
 
@@ -458,7 +506,7 @@ www.youtube.com/channel/UC3SyT4_WLHzN7JmHQwKQZww
 ## 10. Images(이미지)
 
 ```
-형식 : ![Text](url)
+형식 : ![Image id](url)
 ```
 
 * 이미지 추가는 느낌표(!)를 대체 텍스트의 대괄호 앞에 붙인 후, 경로 또는 URL을 괄호 안에 삽입(링크와 마찬가지로 괄호() 나 큰따옴표""를 통해 설명(title)을 달 수 있음)
@@ -479,7 +527,7 @@ www.youtube.com/channel/UC3SyT4_WLHzN7JmHQwKQZww
 ---
 <br>
 
-## 11. Escaping Characters(탈출문)
+## 11. Escaping Characters(탈출문자)
 * 앞의 4. Emphasis에서 잠깐 언급한 바 있는데, 문법에서 사용되는 문자를 텍스트로 표현하기 위해 문자 앞에 백슬래시(\)를 추가하는 것을 말함
 
 
@@ -666,7 +714,7 @@ www.youtube.com/channel/UC3SyT4_WLHzN7JmHQwKQZww
   * \<script>
   * \<plaintext> [사용불가]
 
-여기서 사용불가 처리한 태그들은 다음과 같이 <>가 &lt;> 처리되어 표현됨
+여기서 사용불가 처리한 태그들은 다음과 같이 <>가 \&lt;> 처리되어 표현됨
 
 ```
 <strong> <title> <style> <em>
@@ -683,6 +731,64 @@ www.youtube.com/channel/UC3SyT4_WLHzN7JmHQwKQZww
 </blockquote>
 ```
 -> 그렇기 때문에 이탤릭체로 표시되는 현상 발생
+
+---
+
+<br>
+---
+
+## 14. 기타 GFM 정리
+
+
+### - SHA 참조
+* Refs가 있으면 커밋을 찾기 쉬워지는데 [SHA-1 hash](https://en.wikipedia.org/wiki/SHA-1) 는 자동으로 GitHub에 커밋에 대한 링크로 변환해 줌
+
+```
+16c999e8c71134401a78d4d46435517b2271d6ac
+mojombo@16c999e8c71134401a78d4d46435517b2271d6ac
+mojombo/github-flavored-markdown@16c999e8c71134401a78d4d46435517b2271d6ac
+```
+<br>
+
+---
+
+
+<br>
+
+
+### - 저장소 내에서의 이슈 참조
+이슈 또는 Pull Request 요청의 모든 번호가 자동 링크로 변환됩니다.
+
+```
+#1
+mojombo#1
+mojombo/github-flavored-markdown#1
+```
+
+<br>
+
+---
+
+<br>
+
+
+### - 사용자 이름 태그 @mentions
+* @ 기호 다음에 사용자 이름을 입력하면 그 사람에게 깃허브 상에서 알림 메시지 호출
+* 조직 내에서 팀을 @mention 할 수 있음
+
+<br>
+
+---
+
+<br>
+
+### - Emoji(이모지)
+* GitHub에서도 마크다운을 통해 이모티콘 사용이 가능
+  ```
+  "상상이 현실이 된다!"
+  👐➡🦋✨
+  ```
+<br>
 
 ---
 
