@@ -429,58 +429,121 @@ _________________
 
 ## 10. Images(이미지)
 
+```
+형식 : ![Text](url)
+```
+
 * 이미지 추가는 느낌표(!)를 대체 텍스트의 대괄호 앞에 붙인 후, 경로 또는 URL을 괄호 안에 삽입(링크와 마찬가지로 괄호() 나 큰따옴표""를 통해 설명(title)을 달 수 있음)
 
 ```
-![GitHub Logo](images/logo.png)
-Format: ![Alt Text](url)
+![LILAC](https://user-images.githubusercontent.com/39428260/112938741-2695ad80-9165-11eb-850a-dfbe7c20fee0.jpg)
 ```
 
-![GitHub Logo](images/logo.png)
-Format: ![Alt Text](url)
+![LILAC](https://user-images.githubusercontent.com/39428260/112938741-2695ad80-9165-11eb-850a-dfbe7c20fee0.jpg)
 
-### Reference link 방식
-
-```
-![대체 텍스트][Img_id]
-
-[Img_id]: 이미지 url "이미지 설명 정보"
+* 이미지 링크를 만들기 위해서는 전체 대괄호를 만들어 뒤에 링크를 삽입
 
 ```
-![대체 텍스트][Img_id]
-
-[Img_id]: https://images.velog.io/images/good159897/post/b889a389-5289-4d44-9d0f-1fbfcba53f97/markdown2.png "이미지 설명 정보"
-
-- Reference로 사용할 경우 [이미지 id]와 ' : '를 아래와 같이 반드시 붙여서 작성해야 한다.
-**[예시_id]: **
+[![buying-albums](https://user-images.githubusercontent.com/39428260/112939323-3792ee80-9166-11eb-9df3-0e1e1a2725f7.jpg)"앨범 구매하러 가기"](http://www.hottracks.co.kr/ht/record/detail/2300186089126)
+```
+[![buying-albums](https://user-images.githubusercontent.com/39428260/112939323-3792ee80-9166-11eb-9df3-0e1e1a2725f7.jpg)"이미지 클릭 시 사이트 이동"](http://www.hottracks.co.kr/ht/record/detail/2300186089126)
 
 ---
-
-#### Markdown에서 이미지 크기를 조정하고 싶은 경우 `<img>` 태그를 사용하는 방법이 있다.
-
-```
-<img src="이미지 주소" width="100px" height="100px"> 이미지 설명</img>
-```
-
-<img src="https://images.velog.io/images/good159897/post/b889a389-5289-4d44-9d0f-1fbfcba53f97/markdown2.png" width="100px" height="100px" alt="Markdown Logo">
-</img>
-
-```
-<img src="이미지 주소" width="200px" height="100px"> 이미지 설명</img>
-```
-
-<img src="https://images.velog.io/images/good159897/post/b889a389-5289-4d44-9d0f-1fbfcba53f97/markdown2.png" width="300px" height="100px" alt="Markdown Logo">
-</img>
-
-```
-<img src="이미지 주소" width="50%" height="30%"> 이미지 설명</img>   
-%로 크기 조정이 가능하다.
-```
-
-<img src="https://images.velog.io/images/good159897/post/b889a389-5289-4d44-9d0f-1fbfcba53f97/markdown2.png" width="50%" height="30%" alt="Markdown Logo">
-</img>
-
 <br>
 
+## 11. Escaping Characters(탈출문)
+* 앞의 4. Emphasis에서 잠깐 언급한 바 있는데, 문법에서 사용되는 문자를 텍스트로 표현하기 위해 문자 앞에 백슬래시(\)를 추가하는 것을 말함
 
-11. HTML
+
+```
+[백슬래시 사용 전]
+*백슬래시를 사용하여 (*)를 탈출시켜 보자!
+
+[백슬래시 사용 후]
+\*백슬래시를 사용하여 (*)를 탈출시켜 보자!
+```
+
+[백슬래시 사용 전]
+*백슬래시를 사용하여 (*)를 탈출시켜 보자!
+
+[백슬래시 사용 후]
+\*백슬래시를 사용하여 (*)를 탈출시켜 보자!
+
+* 그 밖의 탈출문자를 사용해야 하는 문자 모음
+
+|**Character**|**Name**|
+|------|---|
+|\\ |backslash 백슬래시|
+|`|backtick 백틱(코드를 탈출시킬 때)|
+|\*|asterisk 별표|
+|\_|underscore 언더바|
+|{} |curly braces 중괄호|
+|[]|brackets 대괄호|
+|<>|angle brackets 꺾쇠|
+|()|parentheses 소괄호|
+|#|pound sign 샵|
+|+|plus sign 덧셈 기호|
+|-|minus sign 뺄셈 기호|
+|.|dot 온점|
+|!|exclamation mark 느낌표|
+|||파이프(표를 탈출시킬 때)|
+
+---
+<br>
+
+## 12. HTML
+* HTML은 마크다운 문법에서 자주 사용되는 언어기 때문에 HTML 태그 사용이 빈번
+
+* 사용하는 방법은 새로운 줄에세 HTML 태그(예: \<div>, \<table>, \<pre>, \<p>)를 삽입
+
+* 하지만 마크다운 문법에서는 \*과 같은 경우 *Italic* 처리를 하기 때문에 HTML 문법과 구분하여 사용할 필요가 있음
+
+* 주로 마크다운 문법에서 HTML을 사용하는 목적은 텍스트 색상, 이미지 너비 변경에 있음
+
+### - HTML 로 텍스트 변경
+
+```
+[텍스트 원본 : 마크다운]
+
+강자에게 더 세게 I love gamble
+
+[텍스트 수정 : HTML]
+
+<span style = " font-size:1.5em;  color: plum;">
+강자에게 더 세게 I love gamble
+</span>
+```
+
+[텍스트 원본 : 마크다운]
+
+강자에게 더 세게 I love gamble
+
+[텍스트 수정 : HTML]
+
+<span style = " font-size:1.5em;  color: plum;">
+강자에게 더 세게 I love gamble
+</span>
+
+<br><br>
+
+### -  HTML 로 이미지 너비 변경
+
+```
+[이미지 원본 : 마크다운]
+
+![coin](https://user-images.githubusercontent.com/39428260/112941600-d4a35680-9169-11eb-8cfc-dbbe6b4bdf81.jpg)
+
+[이미지 수정 : HTML]
+
+<img src="https://user-images.githubusercontent.com/39428260/112941600-d4a35680-9169-11eb-8cfc-dbbe6b4bdf81.jpg" width="20%" height="20%" alt="Markdown Logo">
+</img>
+```
+
+[이미지 원본 : 마크다운]
+
+![coin](https://user-images.githubusercontent.com/39428260/112941600-d4a35680-9169-11eb-8cfc-dbbe6b4bdf81.jpg)
+
+[이미지 수정 : HTML]
+
+<img src="https://user-images.githubusercontent.com/39428260/112941600-d4a35680-9169-11eb-8cfc-dbbe6b4bdf81.jpg" width="20%" height="20%" alt="Markdown Logo">
+</img>
