@@ -757,7 +757,7 @@ mojombo/github-flavored-markdown@16c999e8c71134401a78d4d46435517b2271d6ac
 
 
 ### - 저장소 내에서의 이슈 참조
-이슈 또는 Pull Request 요청의 모든 번호가 자동 링크로 변환됩니다.
+이슈 또는 Pull Request 요청의 모든 번호가 자동 링크로 변환
 
 ```
 #1
