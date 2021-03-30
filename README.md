@@ -322,7 +322,108 @@ __*Italic & Bold*__ 사용
 
 <br>
 
-## 1-4. 이미지(Images)
+## 7. Code(코드 작성)
+
+type `nano` 즉, ``` 기호를 쓰고자 하는 언어 앞에 붙이고 다음과 같이 작성
+
+```
+``` c
+#include <stdio.h>
+
+int main(){
+
+    printf("Hello World-!!");
+
+}
+```
+==== **결과** ====
+
+
+``` c
+#include <stdio.h>
+
+int main(){
+
+    printf("Hello World-!!");
+
+}
+```
+---
+
+<br>
+
+## 8. Horizontal Rules(줄표 넣기)
+* 줄표를 넣으려면 한 줄에 세 개 이상의 별표(***), 대시(---) 또는 밑줄(__) 사용
+
+
+```
+***
+---
+_________________
+```
+
+==== **결과** ====
+***
+---
+_________________
+
+============
+
+<br><br>
+
+---
+
+## 9.  Links(링크 걸기)
+
+* 링크 텍스트를 대괄호(예: [Twitch])로 묶은 다음 즉시 URL을 괄호 안에 삽입 <br>(예: (https://www.twitch.tv/)
+
+```
+[Twitch](https://www.twitch.tv/)
+```
+[Twitch](https://www.twitch.tv/)
+
+---
+
+<br>
+
+* 위 방법이 귀찮거나 더 빠른 방법을 원한다면 URL 및 이메일 주소에 바로 꺾쇠 사용
+
+```
+<https://jieuninus.com/> <br>
+<jeongmint@kakao.com>
+```
+<https://jieuninus.com/> <br/>
+<jeongmint@kakao.com>
+
+---
+<br>
+
+* 링크 뒤에 괄호() 나 큰따옴표""로 문자를 삽입하면 메모를 다는 것이 가능, 다음과 같이 모든 링크 형식을 정리할 수 있음
+
+```
+[1]: https://madeedam.com/
+[1]: https://madeedam.com/ "New IU Fan Products"
+[1]: https://madeedam.com/ 'New IU Fan Products'
+[1]: https://madeedam.com/ (New IU Fan Products)
+[1]: <https://madeedam.com/> "New IU Fan Products"
+[1]: <https://madeedam.com/> 'New IU Fan Products'
+[1]: <https://madeedam.com/> (New IU Fan Products)
+(https://madeedam.com/)
+
+```
+[1]: https://madeedam.com/ 
+[1]: https://madeedam.com/ "New IU Fan Products"
+[1]: https://madeedam.com/ 'New IU Fan Products'
+[1]: https://madeedam.com/ (New IU Fan Products)
+[1]: <https://madeedam.com/> "New IU Fan Products"
+[1]: <https://madeedam.com/> 'New IU Fan Products'
+[1]: <https://madeedam.com/> (New IU Fan Products)
+(https://madeedam.com/)
+
+---
+<br>
+
+## 10. Images(이미지)
 
 ```
 ![GitHub Logo](images/logo.png)
@@ -332,9 +433,7 @@ Format: ![Alt Text](url)
 ![GitHub Logo](images/logo.png)
 Format: ![Alt Text](url)
 
-## 1-7. Image
-
-### 1-7-2. Reference link 방식
+### Reference link 방식
 
 ```
 ![대체 텍스트][Img_id]
@@ -376,3 +475,6 @@ Format: ![Alt Text](url)
 </img>
 
 <br>
+
+
+11. HTML
