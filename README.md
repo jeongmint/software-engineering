@@ -1,10 +1,14 @@
 # Markdown Syntax 정리
 
-[Markdown Guide](https://www.markdownguide.org/ "마크다운 가이드")
+### **참조**
+
+[Markdown Guide Basic](https://www.markdownguide.org/ "마크다운 가이드")
+
+[Markdown Guide Extension](https://www.markdownguide.org/ "마크다운 가이드")
+
+https://guides.github.com/features/mastering-markdown/
 
 [마크다운 위키백과 사이트](https://ko.wikipedia.org/wiki/%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4 "마크다운 위키백과 사이트")
-
-두 사이트를 참조하여 정리
 
 ---
 
@@ -189,9 +193,9 @@ __*Italic & Bold*__ 사용
 
 <br/>
 
-## Escaping Characters
+## Escaping Characters (추후에 서술되는 11. Escaping Characters 참고)
 
-### -' \* '와 ' \_ '를 문자로 사용하고 싶을 때
+### ' \* '와 ' \_ '를 문자로 사용하고 싶을 때
 
 해당 문자를 이탤릭체가 아닌 텍스트 문자로 사용하고자 할 때는<br/>
 이스케이프 문자 ' \ '를 이용
@@ -398,7 +402,7 @@ _________________
 ---
 <br>
 
-* 링크 뒤에 괄호() 나 큰따옴표""로 문자를 삽입하면 메모를 다는 것이 가능, 다음과 같이 모든 링크 형식을 정리할 수 있음
+* 링크 뒤에 괄호() 나 큰따옴표""로 문자를 삽입하면 설명(title)을 다는 것이 가능, 다음과 같이 모든 링크 형식을 정리할 수 있음
 
 ```
 [1]: https://madeedam.com/
@@ -424,6 +428,8 @@ _________________
 <br>
 
 ## 10. Images(이미지)
+
+* 이미지 추가는 느낌표(!)를 대체 텍스트의 대괄호 앞에 붙인 후, 경로 또는 URL을 괄호 안에 삽입(링크와 마찬가지로 괄호() 나 큰따옴표""를 통해 설명(title)을 달 수 있음)
 
 ```
 ![GitHub Logo](images/logo.png)
