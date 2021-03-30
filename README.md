@@ -1,17 +1,5 @@
 # Markdown Syntax 정리
 
-### **참조**
-
-[Markdown Guide Basic](https://www.markdownguide.org/ "마크다운 가이드")
-
-[Markdown Guide Extension](https://www.markdownguide.org/ "마크다운 가이드")
-
-https://guides.github.com/features/mastering-markdown/
-
-[마크다운 위키백과 사이트](https://ko.wikipedia.org/wiki/%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4 "마크다운 위키백과 사이트")
-
----
-
 <br/>
 
 
@@ -129,7 +117,7 @@ br/> 태그를 사용
 
 ## 4. Emphasis(강조)
 
-### - *이탤릭체*
+### - *(Italic)이탤릭체*
 
 ```markdown
 
@@ -138,7 +126,7 @@ br/> 태그를 사용
 
 ```
 
-### - **볼드체**
+### - **(Bold)볼드체**
 
 ```markdown
 
@@ -147,7 +135,7 @@ br/> 태그를 사용
 
 ```
 
-### - __*이탤릭 & 볼드체 동시사용*__
+### - __*(Italic & Bold)이탤릭 & 볼드체 동시 사용*__
 
 ```markdown
 
@@ -156,7 +144,7 @@ __*Italic & Bold*__ 사용
 
 ```
 
-### - <u>밑줄</u>
+### - <u>(Underline)밑줄</u>
 
 ```markdown
 
@@ -165,7 +153,7 @@ __*Italic & Bold*__ 사용
 
 ```
 
-### - ~~취소선~~
+### - ~~(Strikethrough)취소선~~
 
 ```markdown
 
@@ -281,7 +269,7 @@ __*Italic & Bold*__ 사용
 
 <br/>
 
-### 순서가 없는 리스트(Unordered)
+### 순서가 없는 리스트(Unordered) : 마커는 *, +, - 를 사용
 * '*' 표현
 
 ```
@@ -311,7 +299,9 @@ __*Italic & Bold*__ 사용
 
 모두 동일하게 표현되기 때문에 어떤 것을 사용하여도 무방
 
- * 2n개의 공백(space)만을 삽입하여 중첩리스트 표현
+---
+
+ * 2 개의 공백(space)만을 삽입하여 중첩리스트 표현
 ```
 - 리스트 1
 (space)(space)- 리스트 2
@@ -322,8 +312,38 @@ __*Italic & Bold*__ 사용
     - 리스트 3
 <br/>
 
----
+* 2 개를 사용하지 않고 1개의 공백을 사용하면 다음과 같이 하나의 계층으로 출력
 
+```
+- 리스트 a
+  - 리스트 b
+   - 리스트 c
+    - 리스트 d
+     - 리스트 e 
+```
+
+- 리스트 a
+  - 리스트 b
+   - 리스트 c
+    - 리스트 d
+     - 리스트 e 
+
+---
+* 리스트와 인용구를 활용하여 다음과 같이 작성 가능, 그러나 빈 리스트가 존재할 때는 빈 리스트가 어느 상황에서든 출력되지 않음
+
+```
+* 리스트 a
+  > 리스트 b
+  >
+* 리스트 c
+```
+
+* 리스트 a
+  > 리스트 b
+  >
+* 리스트 c
+
+---
 <br>
 
 ## 7. Code(코드 작성)
@@ -390,12 +410,20 @@ _________________
 
 <br>
 
-* 위 방법이 귀찮거나 더 빠른 방법을 원한다면 URL 및 이메일 주소에 바로 꺾쇠 사용
+* 위 방법이 귀찮거나 더 빠른 방법을 원한다면 URL 및 이메일 주소에 바로 사용하거나, 꺾쇠 사용
 
 ```
+[자동 링크]
+www.youtube.com/channel/UC3SyT4_WLHzN7JmHQwKQZww
+
+[꺾쇠 링크]
 <https://jieuninus.com/> <br>
 <jeongmint@kakao.com>
 ```
+[자동 링크]<br>
+www.youtube.com/channel/UC3SyT4_WLHzN7JmHQwKQZww
+
+[꺾쇠 링크]<br>
 <https://jieuninus.com/> <br/>
 <jeongmint@kakao.com>
 
@@ -483,20 +511,96 @@ _________________
 |()|parentheses 소괄호|
 |#|pound sign 샵|
 |+|plus sign 덧셈 기호|
-|-|minus sign 뺄셈 기호|
+|-|minus sign/hyphen 뺄셈 기호/하이픈|
 |.|dot 온점|
 |!|exclamation mark 느낌표|
 |||파이프(표를 탈출시킬 때)|
 
----
 <br>
 
-## 12. HTML
-* HTML은 마크다운 문법에서 자주 사용되는 언어기 때문에 HTML 태그 사용이 빈번
+---
+
+<br>
+
+## 12. Tables(표)
+ 
+* 마크다운에서는 앞서 정리한 탈출문자 중 파이프 기호 ' | ' 와 하이픈 ' - '을 사용하여 표를 나타냄
+
+```
+| 동물 | 울음소리 |
+| --- | --- |
+| 고양이 | 야옹 |
+| 닭 | 꼬꼬댁 |
+```
+
+| 동물 | 울음소리 |
+| --- | --- |
+| 고양이 | 야옹 |
+| 닭 | 꼬꼬댁 |
+
+<br>
+
+* 정렬은 칼럼을 두고 싶은 방향으로 콜론 ' : ' 기호를 추가 
+
+```
+[왼쪽 정렬]
+| 동물 | 울음소리 |
+| :--- | :--- |
+| 고양이 | 야옹 |
+| 닭    | 꼬꼬댁 |
+| 하마  |      |
+|       | 멍멍 |
+
+[오른쪽 정렬]
+| 동물 | 울음소리 |
+| ---: | ---: |
+| 닭    | 꼬꼬댁 |
+| 하마  |      |
+|       | 멍멍 |
+
+[가운데 정렬]
+| 동물 | 울음소리 |
+| :---: | :---: |
+| 고양이 | 야옹 |
+| 닭    | 꼬꼬댁 |
+| 하마  |      |
+|       | 멍멍 |
+```
+[왼쪽 정렬]
+| 동물 | 울음소리 |
+| :--- | :--- |
+| 고양이 | 야옹 |
+| 닭 | 꼬꼬댁 |
+| 하마 |  |
+| | 멍멍 |
+<br>
+
+[오른쪽 정렬]
+| 동물 | 울음소리 |
+| ---: | ---: |
+| 고양이 | 야옹 |
+| 닭 | 꼬꼬댁 |
+| 하마 |  |
+| | 멍멍 |
+<br>
+
+[가운데 정렬]
+| 동물 | 울음소리 |
+| :---: | :---: |
+| 고양이 | 야옹 |
+| 닭 | 꼬꼬댁 |
+| 하마 |  |
+| | 멍멍 |
+<br>
+
+
+---
+<br><br>
+
+## 13. HTML
+* HTML은 마크다운에서 자주 사용되는 언어기 때문에 HTML 태그 사용이 빈번
 
 * 사용하는 방법은 새로운 줄에세 HTML 태그(예: \<div>, \<table>, \<pre>, \<p>)를 삽입
-
-* 하지만 마크다운 문법에서는 \*과 같은 경우 *Italic* 처리를 하기 때문에 HTML 문법과 구분하여 사용할 필요가 있음
 
 * 주로 마크다운 문법에서 HTML을 사용하는 목적은 텍스트 색상, 이미지 너비 변경에 있음
 
@@ -547,3 +651,31 @@ _________________
 
 <img src="https://user-images.githubusercontent.com/39428260/112941600-d4a35680-9169-11eb-8cfc-dbbe6b4bdf81.jpg" width="20%" height="20%" alt="Markdown Logo">
 </img>
+
+<br><br>
+
+* 하지만 마크다운 문법에서는 \*과 같은 경우 *Italic* 처리를 하기 때문에 허용되지 않는 RAW HTML과 구분하여 사용할 필요가 있음
+  
+
+
+---
+
+<br>
+
+## GitHub repository URL
+
+https://github.com/jeongmint/software-engineering
+
+<br>
+
+---
+
+### **참조**
+
+[Markdown Guide Basic Syntax](https://www.markdownguide.org/basic-syntax/ "마크다운 가이드")
+
+[Markdown Guide Extended Syntax - GFM](https://github.github.com/gfm/ "마크다운 가이드")
+
+https://guides.github.com/features/mastering-markdown/
+
+[마크다운 위키백과 사이트](https://ko.wikipedia.org/wiki/%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4 "마크다운 위키백과 사이트")
